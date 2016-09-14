@@ -5,10 +5,12 @@ const CatItemView = Backbone.View.extend({
   el: '<li></li>',
 
   template: _.template(`
-    <img src="<%= cat.get('image') %>" alt="Profile Pic" />
-    <div>
-      <span> <%= cat.get('name') %> </span>
-    </div>
+    <a href="#cats/<%= cat.get('_id') %>">
+      <img src="<%= cat.get('image') %>" alt="Profile Pic" />
+    </a>
+      <div>
+        <span> <%= cat.get('name') %> </span>
+      </div>
   `),
 
   render() {
